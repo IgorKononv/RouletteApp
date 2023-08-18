@@ -7,16 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F16977E2A8E3F4E0092027A /* RouletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16977D2A8E3F4E0092027A /* RouletteViewModel.swift */; };
+		6F1697802A8E465F0092027A /* SectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16977F2A8E465F0092027A /* SectorModel.swift */; };
+		6F1697822A8E5D6E0092027A /* SectorColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697812A8E5D6E0092027A /* SectorColor.swift */; };
+		6F1697842A8E5E2C0092027A /* BettingBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697832A8E5E2C0092027A /* BettingBoardView.swift */; };
+		6F1697862A8E5E3E0092027A /* BettingBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697852A8E5E3E0092027A /* BettingBoardViewModel.swift */; };
+		6F16978A2A8E6B420092027A /* SectorMeneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697892A8E6B420092027A /* SectorMeneger.swift */; };
+		6F1697902A8E732B0092027A /* RouleteTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16978F2A8E732B0092027A /* RouleteTabView.swift */; };
+		6F1697932A8E80090092027A /* ScreeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697922A8E80090092027A /* ScreeSize.swift */; };
+		6F1697952A8E9ADA0092027A /* WhichOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697942A8E9ADA0092027A /* WhichOf.swift */; };
+		6F1697982A8F64960092027A /* BottomViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697972A8F64960092027A /* BottomViewStack.swift */; };
+		6F16979A2A8F64DE0092027A /* WhichOfTwelveViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697992A8F64DE0092027A /* WhichOfTwelveViewStack.swift */; };
+		6F16979C2A8F65560092027A /* ZeroViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16979B2A8F65560092027A /* ZeroViewStack.swift */; };
+		6F16979E2A8F65C40092027A /* SectorsViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16979D2A8F65C40092027A /* SectorsViewStack.swift */; };
+		6F1697A02A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */; };
 		6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */; };
-		6FFE35682A8E1F1500956848 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35672A8E1F1500956848 /* ContentView.swift */; };
+		6FFE35682A8E1F1500956848 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35672A8E1F1500956848 /* RouletteView.swift */; };
 		6FFE356A2A8E1F1600956848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE35692A8E1F1600956848 /* Assets.xcassets */; };
 		6FFE356D2A8E1F1600956848 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE356C2A8E1F1600956848 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F16977D2A8E3F4E0092027A /* RouletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewModel.swift; sourceTree = "<group>"; };
+		6F16977F2A8E465F0092027A /* SectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorModel.swift; sourceTree = "<group>"; };
+		6F1697812A8E5D6E0092027A /* SectorColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorColor.swift; sourceTree = "<group>"; };
+		6F1697832A8E5E2C0092027A /* BettingBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingBoardView.swift; sourceTree = "<group>"; };
+		6F1697852A8E5E3E0092027A /* BettingBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingBoardViewModel.swift; sourceTree = "<group>"; };
+		6F1697892A8E6B420092027A /* SectorMeneger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorMeneger.swift; sourceTree = "<group>"; };
+		6F16978F2A8E732B0092027A /* RouleteTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouleteTabView.swift; sourceTree = "<group>"; };
+		6F1697922A8E80090092027A /* ScreeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreeSize.swift; sourceTree = "<group>"; };
+		6F1697942A8E9ADA0092027A /* WhichOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichOf.swift; sourceTree = "<group>"; };
+		6F1697972A8F64960092027A /* BottomViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewStack.swift; sourceTree = "<group>"; };
+		6F1697992A8F64DE0092027A /* WhichOfTwelveViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichOfTwelveViewStack.swift; sourceTree = "<group>"; };
+		6F16979B2A8F65560092027A /* ZeroViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroViewStack.swift; sourceTree = "<group>"; };
+		6F16979D2A8F65C40092027A /* SectorsViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsViewStack.swift; sourceTree = "<group>"; };
+		6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichOfTwoInOneViewStack.swift; sourceTree = "<group>"; };
 		6FFE35622A8E1F1500956848 /* RouletteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouletteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteAppApp.swift; sourceTree = "<group>"; };
-		6FFE35672A8E1F1500956848 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FFE35672A8E1F1500956848 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
 		6FFE35692A8E1F1600956848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FFE356C2A8E1F1600956848 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +60,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F16977C2A8E37610092027A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F16977F2A8E465F0092027A /* SectorModel.swift */,
+				6F1697812A8E5D6E0092027A /* SectorColor.swift */,
+				6F1697942A8E9ADA0092027A /* WhichOf.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F1697872A8E6B1D0092027A /* Menegers */ = {
+			isa = PBXGroup;
+			children = (
+				6F1697892A8E6B420092027A /* SectorMeneger.swift */,
+			);
+			path = Menegers;
+			sourceTree = "<group>";
+		};
+		6F16978B2A8E71FF0092027A /* BordComponets */ = {
+			isa = PBXGroup;
+			children = (
+				6F1697832A8E5E2C0092027A /* BettingBoardView.swift */,
+				6F1697962A8F64610092027A /* ViewStacks */,
+				6F1697852A8E5E3E0092027A /* BettingBoardViewModel.swift */,
+			);
+			path = BordComponets;
+			sourceTree = "<group>";
+		};
+		6F16978C2A8E72150092027A /* RouletteComponets */ = {
+			isa = PBXGroup;
+			children = (
+				6FFE35672A8E1F1500956848 /* RouletteView.swift */,
+				6F16977D2A8E3F4E0092027A /* RouletteViewModel.swift */,
+			);
+			path = RouletteComponets;
+			sourceTree = "<group>";
+		};
+		6F16978D2A8E72520092027A /* RouletteAppTabView */ = {
+			isa = PBXGroup;
+			children = (
+				6F16978E2A8E72B20092027A /* RouleteTabView */,
+			);
+			path = RouletteAppTabView;
+			sourceTree = "<group>";
+		};
+		6F16978E2A8E72B20092027A /* RouleteTabView */ = {
+			isa = PBXGroup;
+			children = (
+				6F16978F2A8E732B0092027A /* RouleteTabView.swift */,
+				6F16978C2A8E72150092027A /* RouletteComponets */,
+				6F16978B2A8E71FF0092027A /* BordComponets */,
+			);
+			path = RouleteTabView;
+			sourceTree = "<group>";
+		};
+		6F1697912A8E7FDA0092027A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6F1697922A8E80090092027A /* ScreeSize.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6F1697962A8F64610092027A /* ViewStacks */ = {
+			isa = PBXGroup;
+			children = (
+				6F1697972A8F64960092027A /* BottomViewStack.swift */,
+				6F1697992A8F64DE0092027A /* WhichOfTwelveViewStack.swift */,
+				6F16979B2A8F65560092027A /* ZeroViewStack.swift */,
+				6F16979D2A8F65C40092027A /* SectorsViewStack.swift */,
+				6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */,
+			);
+			path = ViewStacks;
+			sourceTree = "<group>";
+		};
 		6FFE35592A8E1F1500956848 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */,
-				6FFE35672A8E1F1500956848 /* ContentView.swift */,
+				6F16978D2A8E72520092027A /* RouletteAppTabView */,
+				6F16977C2A8E37610092027A /* Models */,
+				6F1697872A8E6B1D0092027A /* Menegers */,
+				6F1697912A8E7FDA0092027A /* Helper */,
 				6FFE35692A8E1F1600956848 /* Assets.xcassets */,
 				6FFE356B2A8E1F1600956848 /* Preview Content */,
 			);
@@ -137,8 +243,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FFE35682A8E1F1500956848 /* ContentView.swift in Sources */,
+				6F1697822A8E5D6E0092027A /* SectorColor.swift in Sources */,
+				6F16978A2A8E6B420092027A /* SectorMeneger.swift in Sources */,
+				6F16977E2A8E3F4E0092027A /* RouletteViewModel.swift in Sources */,
+				6F1697932A8E80090092027A /* ScreeSize.swift in Sources */,
+				6F1697802A8E465F0092027A /* SectorModel.swift in Sources */,
+				6F1697A02A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift in Sources */,
+				6F1697902A8E732B0092027A /* RouleteTabView.swift in Sources */,
+				6F16979A2A8F64DE0092027A /* WhichOfTwelveViewStack.swift in Sources */,
+				6F1697952A8E9ADA0092027A /* WhichOf.swift in Sources */,
+				6FFE35682A8E1F1500956848 /* RouletteView.swift in Sources */,
 				6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */,
+				6F1697842A8E5E2C0092027A /* BettingBoardView.swift in Sources */,
+				6F1697982A8F64960092027A /* BottomViewStack.swift in Sources */,
+				6F16979E2A8F65C40092027A /* SectorsViewStack.swift in Sources */,
+				6F1697862A8E5E3E0092027A /* BettingBoardViewModel.swift in Sources */,
+				6F16979C2A8F65560092027A /* ZeroViewStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +393,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,8 +422,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

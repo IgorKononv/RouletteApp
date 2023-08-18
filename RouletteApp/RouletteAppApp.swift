@@ -11,7 +11,7 @@ import SwiftUI
 struct RouletteAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouleteTabView()
         }
     }
 }
