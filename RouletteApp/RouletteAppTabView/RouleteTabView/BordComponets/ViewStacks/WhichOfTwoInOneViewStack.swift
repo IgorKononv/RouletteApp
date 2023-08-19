@@ -15,16 +15,32 @@ struct WhichOfTwoInOneViewStack: View {
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3), spacing: 0) {
                 ForEach(viewModel.whichOfTwoInOne, id: \.hashValue) { betCell in
                     Button {
-                        
+                        viewModel.whichOfTwoInOneBetCell(betCell)
                     } label: {
                         ZStack {
                             Rectangle()
                                 .foregroundColor(.clear)
                                 .border(.white)
-                                .frame(height: 30)
+                                .frame(height: 40)
                             Text("2-1")
                                 .foregroundColor(.white)
                                 .bold()
+
+                            if let value = viewModel.dictionaryWhichOfTwoInOneWinBets.first(where: { betCell == $0.key.whichOfTwoInOne })?.value {
+                                HStack {
+                                    Text(value.description)
+                                        .bold()
+                                        .foregroundColor(.orange)
+                                        .background {
+                                            Color.white
+                                                .cornerRadius(20)
+                                                .padding(-3)
+                                        }
+                                        .offset(y: -5)
+                                    Spacer()
+                                }
+                                .padding(.leading, 3)
+                            }
                         }
                     }
                 }

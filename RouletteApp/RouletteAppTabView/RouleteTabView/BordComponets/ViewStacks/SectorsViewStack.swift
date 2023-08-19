@@ -15,16 +15,32 @@ struct SectorsViewStack: View {
                 ForEach(viewModel.sectors, id: \.number) { betCell in
                     if betCell.number != 0 {
                         Button {
-                            
+                            viewModel.sectorsBetCell(betCell)
                         } label: {
                             ZStack {
                                 Rectangle()
                                     .foregroundColor(Color(betCell.color.color))
                                     .border(.white)
-                                    .frame(height: 30)
+                                    .frame(height: 40)
                                 Text(betCell.number.description)
                                     .foregroundColor(.white)
                                     .bold()
+                                
+                                if let value = viewModel.dictionarySectorsWinBets[betCell] {
+                                    HStack {
+                                        Text(value.description)
+                                            .bold()
+                                            .foregroundColor(.orange)
+                                            .background {
+                                                Color.white
+                                                    .cornerRadius(20)
+                                                    .padding(-3)
+                                            }
+                                            .offset(y: -5)
+                                        Spacer()
+                                    }
+                                    .padding(.leading, 3)
+                                }
                             }
                         }
                     }

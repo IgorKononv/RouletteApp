@@ -8,29 +8,28 @@
 import SwiftUI
 
 class RouletteViewModel: ObservableObject {
-    @Published var isAnimating = false
+    
     @Published var spinDegrees = 0.0
     @Published var rand = 0.0
     @Published var newAngle = 0.0
     let halfSector = 360.0 / 37.0 / 2.0
     let sectors: [SectorModel] = SectorMeneger.shared.sectors
     
-    var spinAnimation: Animation {
-        Animation.easeOut(duration: 3.0)
-            .repeatCount(1, autoreverses: false)
-    }
-    
     func doSpin() {
-        isAnimating = true
-        rand = Double.random(in: 1...360)
-        spinDegrees += 720.0 + rand
-        newAngle = getAngle(angle: spinDegrees)
+        let wheelSpeed = 2000.0
+        
+        InfoBoardMenager.shared.isAnimating = true
+        withAnimation(.easeOut(duration: 3.0)) {
+            rand = Double.random(in: 1...360)
+            spinDegrees += wheelSpeed + rand
+            newAngle = getAngle(angle: spinDegrees)
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.9) {
-            self.isAnimating = false
+            self.sectorFromAngle()
         }
     }
     
-    func sectorFromAngle() -> String {
+    func sectorFromAngle() {
         let angle = newAngle
         var i = 0
         var sector: SectorModel = SectorModel(number: -1, color: .empty, whichOfTwelveModel: nil, whichOfHalfModel: nil, whicOfEvenModel: nil, whichOfTwoInOne: nil)
@@ -44,7 +43,10 @@ class RouletteViewModel: ObservableObject {
             }
             i+=1
         }
-        return "Sector - \(sector.number) \(sector.color.rawValue)"
+        DispatchQueue.main.async {
+            InfoBoardMenager.shared.currentSector = sector
+            InfoBoardMenager.shared.isAnimating = false
+        }
     }
     
     private func getAngle(angle: Double) -> Double {

@@ -11,8 +11,6 @@ struct RouletteView: View {
     @StateObject var viewModel = RouletteViewModel()
     var body: some View {
         VStack {
-            Text(viewModel.isAnimating ? "Spining ..." : viewModel.sectorFromAngle())
-                .multilineTextAlignment(.center)
             Image("Arrow")
                 .resizable()
                 .scaledToFit()
@@ -22,7 +20,7 @@ struct RouletteView: View {
                 .scaledToFit()
                 .rotationEffect(Angle(degrees: viewModel.spinDegrees))
                 .frame(width: 245, height: 245)
-                .animation(viewModel.spinAnimation)
+            
             Button {
                 viewModel.doSpin()
             } label: {

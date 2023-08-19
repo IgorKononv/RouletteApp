@@ -21,6 +21,8 @@
 		6F16979C2A8F65560092027A /* ZeroViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16979B2A8F65560092027A /* ZeroViewStack.swift */; };
 		6F16979E2A8F65C40092027A /* SectorsViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16979D2A8F65C40092027A /* SectorsViewStack.swift */; };
 		6F1697A02A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */; };
+		6F1697A22A8F770D0092027A /* InfoBoardMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697A12A8F770D0092027A /* InfoBoardMenager.swift */; };
+		6F1697A42A8F89310092027A /* RouleteTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697A32A8F89310092027A /* RouleteTabViewModel.swift */; };
 		6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */; };
 		6FFE35682A8E1F1500956848 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35672A8E1F1500956848 /* RouletteView.swift */; };
 		6FFE356A2A8E1F1600956848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE35692A8E1F1600956848 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		6F16979B2A8F65560092027A /* ZeroViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroViewStack.swift; sourceTree = "<group>"; };
 		6F16979D2A8F65C40092027A /* SectorsViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsViewStack.swift; sourceTree = "<group>"; };
 		6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichOfTwoInOneViewStack.swift; sourceTree = "<group>"; };
+		6F1697A12A8F770D0092027A /* InfoBoardMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBoardMenager.swift; sourceTree = "<group>"; };
+		6F1697A32A8F89310092027A /* RouleteTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouleteTabViewModel.swift; sourceTree = "<group>"; };
 		6FFE35622A8E1F1500956848 /* RouletteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouletteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteAppApp.swift; sourceTree = "<group>"; };
 		6FFE35672A8E1F1500956848 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				6F1697892A8E6B420092027A /* SectorMeneger.swift */,
+				6F1697A12A8F770D0092027A /* InfoBoardMenager.swift */,
 			);
 			path = Menegers;
 			sourceTree = "<group>";
@@ -82,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				6F1697832A8E5E2C0092027A /* BettingBoardView.swift */,
-				6F1697962A8F64610092027A /* ViewStacks */,
 				6F1697852A8E5E3E0092027A /* BettingBoardViewModel.swift */,
+				6F1697962A8F64610092027A /* ViewStacks */,
 			);
 			path = BordComponets;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				6F16978F2A8E732B0092027A /* RouleteTabView.swift */,
+				6F1697A32A8F89310092027A /* RouleteTabViewModel.swift */,
 				6F16978C2A8E72150092027A /* RouletteComponets */,
 				6F16978B2A8E71FF0092027A /* BordComponets */,
 			);
@@ -246,6 +252,7 @@
 				6F1697822A8E5D6E0092027A /* SectorColor.swift in Sources */,
 				6F16978A2A8E6B420092027A /* SectorMeneger.swift in Sources */,
 				6F16977E2A8E3F4E0092027A /* RouletteViewModel.swift in Sources */,
+				6F1697A42A8F89310092027A /* RouleteTabViewModel.swift in Sources */,
 				6F1697932A8E80090092027A /* ScreeSize.swift in Sources */,
 				6F1697802A8E465F0092027A /* SectorModel.swift in Sources */,
 				6F1697A02A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift in Sources */,
@@ -256,6 +263,7 @@
 				6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */,
 				6F1697842A8E5E2C0092027A /* BettingBoardView.swift in Sources */,
 				6F1697982A8F64960092027A /* BottomViewStack.swift in Sources */,
+				6F1697A22A8F770D0092027A /* InfoBoardMenager.swift in Sources */,
 				6F16979E2A8F65C40092027A /* SectorsViewStack.swift in Sources */,
 				6F1697862A8E5E3E0092027A /* BettingBoardViewModel.swift in Sources */,
 				6F16979C2A8F65560092027A /* ZeroViewStack.swift in Sources */,

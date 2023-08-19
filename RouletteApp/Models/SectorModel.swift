@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SectorModel: Equatable {    
+struct SectorModel: Equatable, Hashable {    
     let number: Int
     let color: SectorColor
     let whichOfTwelveModel: WhichOfTwelveModel?

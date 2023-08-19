@@ -50,4 +50,5 @@ enum WhichOfTwoInOne: CaseIterable {
     case bottom
     case middle
     case top
+    
 }

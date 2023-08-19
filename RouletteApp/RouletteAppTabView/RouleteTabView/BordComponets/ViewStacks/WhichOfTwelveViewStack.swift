@@ -13,17 +13,30 @@ struct WhichOfTwelveViewStack: View {
         VStack(spacing: 0) {
             ForEach(viewModel.whichOfTwelve) { betCell in
                 Button {
-                    
+                    viewModel.whichOfWhichOfTwelveBetCell(betCell)
                 } label: {
                     ZStack {
                         Rectangle()
                             .foregroundColor(.clear)
                             .border(.white)
-                            .frame(width: ScreeSize.width * 0.1, height: 120)
+                            .frame(width: ScreeSize.width * 0.1, height: 160)
                         Text(betCell.name)
                             .rotationEffect(.degrees(90))
                             .foregroundColor(.white)
                             .bold()
+                        if let value = viewModel.dictionaryWhichOfTwelveWinBets.first(where: { betCell == $0.key.whichOfTwelveModel })?.value {
+                            
+                            Text(value.description)
+                                .bold()
+                                .foregroundColor(.orange)
+                                .background {
+                                    Color.white
+                                        .cornerRadius(20)
+                                        .padding(-3)
+                                    
+                                }
+                                .offset(y: -65)
+                        }
                     }
                 }
             }
