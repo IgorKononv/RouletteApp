@@ -42,7 +42,7 @@ class RouleteTabViewModel: ObservableObject {
         if isPlus {
             rate += 1
         } else {
-            if currentUser.moneyBalance > 0 {
+            if rate > 0 {
                 rate -= 1
             }
         }
