@@ -46,7 +46,7 @@ enum WhicOfEvenModel {
     case odd
 }
 
-enum WhichOfTwoInOne: CaseIterable {
+enum WhichOfTwoInOneModel: CaseIterable {
     case bottom
     case middle
     case top

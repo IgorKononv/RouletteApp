@@ -119,6 +119,7 @@ struct BottomViewStack: View {
                         }
                     }
                 }
+                .disabled(viewModel.isAnimating)
             }
         }
         .offset(x: -ScreeSize.width * 0.39)

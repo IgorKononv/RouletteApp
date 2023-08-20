@@ -14,12 +14,13 @@ class BettingBoardViewModel: ObservableObject {
     @Published var dictionaryWhichHalfOfDigitsWinBets = [SectorModel: Int]()
     @Published var dictionaryWhichOfColorWinBets = [SectorModel: Int]()
     @Published var dictionaryWhichOfEvenWinBets = [SectorModel: Int]()
-    
+    @Published var isAnimating = false
+
     let sectors: [SectorModel] = SectorMeneger.shared.sectors.sorted(by: { $0.number < $1.number })
     let whichOfTwelve: [WhichOfTwelveModel] = WhichOfTwelveModel.allCases
-    let whichOfTwoInOne: [WhichOfTwoInOne] = WhichOfTwoInOne.allCases
+    let whichOfTwoInOne: [WhichOfTwoInOneModel] = WhichOfTwoInOneModel.allCases
     let infoBoardMenager = InfoBoardMenager.shared
-    
+
     init() {
         infoBoardMenager.$dictionarySectorsWinBets
             .map({ $0 })
@@ -39,10 +40,15 @@ class BettingBoardViewModel: ObservableObject {
         infoBoardMenager.$dictionaryWhichOfEvenWinBets
             .map({ $0 })
             .assign(to: &$dictionaryWhichOfEvenWinBets)
+        infoBoardMenager.$isAnimating
+            .map({ $0 })
+            .assign(to: &$isAnimating)
     }
     
     func sectorsBetCell(_ sectorModel: SectorModel) {
         let rate = infoBoardMenager.rate
+        let money = infoBoardMenager.moneyBalance
+        guard money >= rate else { return }
         
         if let retePlus = infoBoardMenager.dictionarySectorsWinBets[sectorModel] {
             infoBoardMenager.moneyBalance += retePlus
@@ -55,6 +61,9 @@ class BettingBoardViewModel: ObservableObject {
     
     func whichOfWhichOfTwelveBetCell(_ whichOfTwelve: WhichOfTwelveModel) {
         let rate = infoBoardMenager.rate
+        let money = infoBoardMenager.moneyBalance
+        guard money >= rate else { return }
+        
         var sectorModel: [SectorModel] = []
         
         sectors.forEach { sector in
@@ -81,8 +90,11 @@ class BettingBoardViewModel: ObservableObject {
         }
     }
     
-    func whichOfTwoInOneBetCell(_ whichOfTwoInOne: WhichOfTwoInOne) {
+    func whichOfTwoInOneBetCell(_ whichOfTwoInOne: WhichOfTwoInOneModel) {
         let rate = infoBoardMenager.rate
+        let money = infoBoardMenager.moneyBalance
+        guard money >= rate else { return }
+        
         var sectorModel: [SectorModel] = []
         
         sectors.forEach { sector in
@@ -111,6 +123,9 @@ class BettingBoardViewModel: ObservableObject {
     
     func bottomViewStackBetCell(bottomCell: Int) {
         let rate = infoBoardMenager.rate
+        let money = infoBoardMenager.moneyBalance
+        guard money >= rate else { return }
+        
         if bottomCell == 1 {
             
             var sectorModel: [SectorModel] = []

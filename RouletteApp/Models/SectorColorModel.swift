@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SectorColor: String {
+enum SectorColorModel: String {
     case red = "RED"
     case black = "BLACK"
     case green = "ZERO"

@@ -9,6 +9,7 @@ import SwiftUI
 
 class RouleteTabViewModel: ObservableObject {
     
+    @Published var scrollViewContentOffset: CGFloat = 0.0
     @Published var didShowMore = false
     @Published var moneyBalance = 2000
     @Published var rate = 50 {
@@ -21,8 +22,9 @@ class RouleteTabViewModel: ObservableObject {
     @Published var currentSector: SectorModel = SectorModel(number: 0, color: .green, whichOfTwelveModel: nil, whichOfHalfModel: nil, whicOfEvenModel: nil, whichOfTwoInOne: nil)
     
     let infoBoardMenager = InfoBoardMenager.shared
-    let valuesBet: [Int] = [50, 100, 200, 500, 1000, 2000, 10000]
-
+    let trackableScrollMenager = TrackableScrollMenager.shared
+    
+    let valuesBet: [Int] = [50, 100, 200, 500, 1000, 2000]
     
     init() {
         infoBoardMenager.$currentSector
@@ -47,6 +49,14 @@ class RouleteTabViewModel: ObservableObject {
     func showMore() {
         withAnimation {
             didShowMore.toggle()
+        }
+    }
+    
+    func checkScroll() {
+        if scrollViewContentOffset > 50 {
+            trackableScrollMenager.isIncreasing = true
+        } else {
+            trackableScrollMenager.isIncreasing = false
         }
     }
 }

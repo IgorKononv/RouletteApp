@@ -43,6 +43,7 @@ struct WhichOfTwoInOneViewStack: View {
                             }
                         }
                     }
+                    .disabled(viewModel.isAnimating)
                 }
                 .padding(.horizontal, -4)
             }

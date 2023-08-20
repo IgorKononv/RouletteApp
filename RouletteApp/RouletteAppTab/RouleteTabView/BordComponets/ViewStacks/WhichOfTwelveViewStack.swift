@@ -39,6 +39,7 @@ struct WhichOfTwelveViewStack: View {
                         }
                     }
                 }
+                .disabled(viewModel.isAnimating)
             }
         }
         .offset(x: -ScreeSize.width * 0.29)

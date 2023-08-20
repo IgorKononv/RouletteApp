@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F16977E2A8E3F4E0092027A /* RouletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16977D2A8E3F4E0092027A /* RouletteViewModel.swift */; };
 		6F1697802A8E465F0092027A /* SectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16977F2A8E465F0092027A /* SectorModel.swift */; };
-		6F1697822A8E5D6E0092027A /* SectorColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697812A8E5D6E0092027A /* SectorColor.swift */; };
+		6F1697822A8E5D6E0092027A /* SectorColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697812A8E5D6E0092027A /* SectorColorModel.swift */; };
 		6F1697842A8E5E2C0092027A /* BettingBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697832A8E5E2C0092027A /* BettingBoardView.swift */; };
 		6F1697862A8E5E3E0092027A /* BettingBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697852A8E5E3E0092027A /* BettingBoardViewModel.swift */; };
 		6F16978A2A8E6B420092027A /* SectorMeneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697892A8E6B420092027A /* SectorMeneger.swift */; };
@@ -23,6 +23,30 @@
 		6F1697A02A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */; };
 		6F1697A22A8F770D0092027A /* InfoBoardMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697A12A8F770D0092027A /* InfoBoardMenager.swift */; };
 		6F1697A42A8F89310092027A /* RouleteTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1697A32A8F89310092027A /* RouleteTabViewModel.swift */; };
+		6FA1716A2A913D9900243A70 /* RouletteAppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171692A913D9900243A70 /* RouletteAppTabView.swift */; };
+		6FA1716C2A913DB400243A70 /* RouletteAppTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1716B2A913DB400243A70 /* RouletteAppTabViewModel.swift */; };
+		6FA1716E2A913EF000243A70 /* RouletteAppTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1716D2A913EF000243A70 /* RouletteAppTabModel.swift */; };
+		6FA171702A914D7E00243A70 /* TabBarForAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1716F2A914D7E00243A70 /* TabBarForAppView.swift */; };
+		6FA171742A915B4600243A70 /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171732A915B4600243A70 /* ScrollOffsetPreferenceKey.swift */; };
+		6FA171782A915B6400243A70 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171772A915B6400243A70 /* TrackableScrollView.swift */; };
+		6FA1717B2A9161E600243A70 /* TrackableScrollMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1717A2A9161E600243A70 /* TrackableScrollMenager.swift */; };
+		6FA1717F2A9170FA00243A70 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1717E2A9170FA00243A70 /* SettingsTabView.swift */; };
+		6FA171812A91710A00243A70 /* SettingsTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171802A91710A00243A70 /* SettingsTabViewModel.swift */; };
+		6FA171832A91724200243A70 /* RatingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171822A91724200243A70 /* RatingTabView.swift */; };
+		6FA171852A91726700243A70 /* RatingTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171842A91726700243A70 /* RatingTabViewModel.swift */; };
+		6FA171872A91744600243A70 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171862A91744600243A70 /* SettingsModel.swift */; };
+		6FA171892A9206FA00243A70 /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171882A9206FA00243A70 /* RatingModel.swift */; };
+		6FA1718C2A920FA700243A70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1718B2A920FA700243A70 /* GoogleService-Info.plist */; };
+		6FA1718F2A9213D300243A70 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA1718E2A9213D300243A70 /* FirebaseAuth */; };
+		6FA171912A9213D300243A70 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA171902A9213D300243A70 /* FirebaseAuthCombine-Community */; };
+		6FA171932A9213D300243A70 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA171922A9213D300243A70 /* FirebaseDatabase */; };
+		6FA171952A9213D300243A70 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA171942A9213D300243A70 /* FirebaseDatabaseSwift */; };
+		6FA171972A9213D300243A70 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA171962A9213D300243A70 /* FirebaseFirestore */; };
+		6FA171992A9213D300243A70 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA171982A9213D300243A70 /* FirebaseFirestoreCombine-Community */; };
+		6FA1719B2A9213D300243A70 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA1719A2A9213D300243A70 /* FirebaseFirestoreSwift */; };
+		6FA1719D2A9213D300243A70 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA1719C2A9213D300243A70 /* FirebaseStorage */; };
+		6FA1719F2A9213D300243A70 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA1719E2A9213D300243A70 /* FirebaseStorageCombine-Community */; };
+		6FA171A12A92141900243A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171A02A92141900243A70 /* AppDelegate.swift */; };
 		6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */; };
 		6FFE35682A8E1F1500956848 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35672A8E1F1500956848 /* RouletteView.swift */; };
 		6FFE356A2A8E1F1600956848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE35692A8E1F1600956848 /* Assets.xcassets */; };
@@ -32,7 +56,7 @@
 /* Begin PBXFileReference section */
 		6F16977D2A8E3F4E0092027A /* RouletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewModel.swift; sourceTree = "<group>"; };
 		6F16977F2A8E465F0092027A /* SectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorModel.swift; sourceTree = "<group>"; };
-		6F1697812A8E5D6E0092027A /* SectorColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorColor.swift; sourceTree = "<group>"; };
+		6F1697812A8E5D6E0092027A /* SectorColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorColorModel.swift; sourceTree = "<group>"; };
 		6F1697832A8E5E2C0092027A /* BettingBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingBoardView.swift; sourceTree = "<group>"; };
 		6F1697852A8E5E3E0092027A /* BettingBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingBoardViewModel.swift; sourceTree = "<group>"; };
 		6F1697892A8E6B420092027A /* SectorMeneger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorMeneger.swift; sourceTree = "<group>"; };
@@ -46,6 +70,21 @@
 		6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichOfTwoInOneViewStack.swift; sourceTree = "<group>"; };
 		6F1697A12A8F770D0092027A /* InfoBoardMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBoardMenager.swift; sourceTree = "<group>"; };
 		6F1697A32A8F89310092027A /* RouleteTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouleteTabViewModel.swift; sourceTree = "<group>"; };
+		6FA171692A913D9900243A70 /* RouletteAppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteAppTabView.swift; sourceTree = "<group>"; };
+		6FA1716B2A913DB400243A70 /* RouletteAppTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteAppTabViewModel.swift; sourceTree = "<group>"; };
+		6FA1716D2A913EF000243A70 /* RouletteAppTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteAppTabModel.swift; sourceTree = "<group>"; };
+		6FA1716F2A914D7E00243A70 /* TabBarForAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarForAppView.swift; sourceTree = "<group>"; };
+		6FA171732A915B4600243A70 /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
+		6FA171772A915B6400243A70 /* TrackableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
+		6FA1717A2A9161E600243A70 /* TrackableScrollMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollMenager.swift; sourceTree = "<group>"; };
+		6FA1717E2A9170FA00243A70 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
+		6FA171802A91710A00243A70 /* SettingsTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabViewModel.swift; sourceTree = "<group>"; };
+		6FA171822A91724200243A70 /* RatingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTabView.swift; sourceTree = "<group>"; };
+		6FA171842A91726700243A70 /* RatingTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTabViewModel.swift; sourceTree = "<group>"; };
+		6FA171862A91744600243A70 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		6FA171882A9206FA00243A70 /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
+		6FA1718B2A920FA700243A70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FA171A02A92141900243A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FFE35622A8E1F1500956848 /* RouletteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouletteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteAppApp.swift; sourceTree = "<group>"; };
 		6FFE35672A8E1F1500956848 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
@@ -58,6 +97,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FA171952A9213D300243A70 /* FirebaseDatabaseSwift in Frameworks */,
+				6FA171932A9213D300243A70 /* FirebaseDatabase in Frameworks */,
+				6FA1718F2A9213D300243A70 /* FirebaseAuth in Frameworks */,
+				6FA1719B2A9213D300243A70 /* FirebaseFirestoreSwift in Frameworks */,
+				6FA171992A9213D300243A70 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				6FA1719D2A9213D300243A70 /* FirebaseStorage in Frameworks */,
+				6FA171972A9213D300243A70 /* FirebaseFirestore in Frameworks */,
+				6FA1719F2A9213D300243A70 /* FirebaseStorageCombine-Community in Frameworks */,
+				6FA171912A9213D300243A70 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +116,11 @@
 			isa = PBXGroup;
 			children = (
 				6F16977F2A8E465F0092027A /* SectorModel.swift */,
-				6F1697812A8E5D6E0092027A /* SectorColor.swift */,
+				6FA171862A91744600243A70 /* SettingsModel.swift */,
+				6FA1716D2A913EF000243A70 /* RouletteAppTabModel.swift */,
+				6F1697812A8E5D6E0092027A /* SectorColorModel.swift */,
 				6F1697942A8E9ADA0092027A /* WhichOf.swift */,
+				6FA171882A9206FA00243A70 /* RatingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -79,6 +130,7 @@
 			children = (
 				6F1697892A8E6B420092027A /* SectorMeneger.swift */,
 				6F1697A12A8F770D0092027A /* InfoBoardMenager.swift */,
+				6FA1717A2A9161E600243A70 /* TrackableScrollMenager.swift */,
 			);
 			path = Menegers;
 			sourceTree = "<group>";
@@ -102,12 +154,18 @@
 			path = RouletteComponets;
 			sourceTree = "<group>";
 		};
-		6F16978D2A8E72520092027A /* RouletteAppTabView */ = {
+		6F16978D2A8E72520092027A /* RouletteAppTab */ = {
 			isa = PBXGroup;
 			children = (
+				6FA1718A2A920CEC00243A70 /* Registration */,
+				6FA171692A913D9900243A70 /* RouletteAppTabView.swift */,
+				6FA1716B2A913DB400243A70 /* RouletteAppTabViewModel.swift */,
+				6FA1716F2A914D7E00243A70 /* TabBarForAppView.swift */,
 				6F16978E2A8E72B20092027A /* RouleteTabView */,
+				6FA1717C2A91703900243A70 /* RatingTabView */,
+				6FA1717D2A91705100243A70 /* SettingsTabView */,
 			);
-			path = RouletteAppTabView;
+			path = RouletteAppTab;
 			sourceTree = "<group>";
 		};
 		6F16978E2A8E72B20092027A /* RouleteTabView */ = {
@@ -125,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				6F1697922A8E80090092027A /* ScreeSize.swift */,
+				6FA171792A915B7000243A70 /* TrackableScrollView */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -139,6 +198,40 @@
 				6F16979F2A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift */,
 			);
 			path = ViewStacks;
+			sourceTree = "<group>";
+		};
+		6FA171792A915B7000243A70 /* TrackableScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				6FA171732A915B4600243A70 /* ScrollOffsetPreferenceKey.swift */,
+				6FA171772A915B6400243A70 /* TrackableScrollView.swift */,
+			);
+			path = TrackableScrollView;
+			sourceTree = "<group>";
+		};
+		6FA1717C2A91703900243A70 /* RatingTabView */ = {
+			isa = PBXGroup;
+			children = (
+				6FA171822A91724200243A70 /* RatingTabView.swift */,
+				6FA171842A91726700243A70 /* RatingTabViewModel.swift */,
+			);
+			path = RatingTabView;
+			sourceTree = "<group>";
+		};
+		6FA1717D2A91705100243A70 /* SettingsTabView */ = {
+			isa = PBXGroup;
+			children = (
+				6FA1717E2A9170FA00243A70 /* SettingsTabView.swift */,
+				6FA171802A91710A00243A70 /* SettingsTabViewModel.swift */,
+			);
+			path = SettingsTabView;
+			sourceTree = "<group>";
+		};
+		6FA1718A2A920CEC00243A70 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		6FFE35592A8E1F1500956848 = {
@@ -161,10 +254,12 @@
 			isa = PBXGroup;
 			children = (
 				6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */,
-				6F16978D2A8E72520092027A /* RouletteAppTabView */,
+				6FA171A02A92141900243A70 /* AppDelegate.swift */,
+				6F16978D2A8E72520092027A /* RouletteAppTab */,
 				6F16977C2A8E37610092027A /* Models */,
 				6F1697872A8E6B1D0092027A /* Menegers */,
 				6F1697912A8E7FDA0092027A /* Helper */,
+				6FA1718B2A920FA700243A70 /* GoogleService-Info.plist */,
 				6FFE35692A8E1F1600956848 /* Assets.xcassets */,
 				6FFE356B2A8E1F1600956848 /* Preview Content */,
 			);
@@ -195,6 +290,17 @@
 			dependencies = (
 			);
 			name = RouletteApp;
+			packageProductDependencies = (
+				6FA1718E2A9213D300243A70 /* FirebaseAuth */,
+				6FA171902A9213D300243A70 /* FirebaseAuthCombine-Community */,
+				6FA171922A9213D300243A70 /* FirebaseDatabase */,
+				6FA171942A9213D300243A70 /* FirebaseDatabaseSwift */,
+				6FA171962A9213D300243A70 /* FirebaseFirestore */,
+				6FA171982A9213D300243A70 /* FirebaseFirestoreCombine-Community */,
+				6FA1719A2A9213D300243A70 /* FirebaseFirestoreSwift */,
+				6FA1719C2A9213D300243A70 /* FirebaseStorage */,
+				6FA1719E2A9213D300243A70 /* FirebaseStorageCombine-Community */,
+			);
 			productName = RouletteApp;
 			productReference = 6FFE35622A8E1F1500956848 /* RouletteApp.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +329,9 @@
 				Base,
 			);
 			mainGroup = 6FFE35592A8E1F1500956848;
+			packageReferences = (
+				6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 6FFE35632A8E1F1500956848 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,6 +348,7 @@
 			files = (
 				6FFE356D2A8E1F1600956848 /* Preview Assets.xcassets in Resources */,
 				6FFE356A2A8E1F1600956848 /* Assets.xcassets in Resources */,
+				6FA1718C2A920FA700243A70 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,22 +359,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F1697822A8E5D6E0092027A /* SectorColor.swift in Sources */,
+				6F1697822A8E5D6E0092027A /* SectorColorModel.swift in Sources */,
+				6FA171852A91726700243A70 /* RatingTabViewModel.swift in Sources */,
 				6F16978A2A8E6B420092027A /* SectorMeneger.swift in Sources */,
+				6FA1717B2A9161E600243A70 /* TrackableScrollMenager.swift in Sources */,
 				6F16977E2A8E3F4E0092027A /* RouletteViewModel.swift in Sources */,
 				6F1697A42A8F89310092027A /* RouleteTabViewModel.swift in Sources */,
+				6FA171872A91744600243A70 /* SettingsModel.swift in Sources */,
 				6F1697932A8E80090092027A /* ScreeSize.swift in Sources */,
+				6FA171A12A92141900243A70 /* AppDelegate.swift in Sources */,
+				6FA1716A2A913D9900243A70 /* RouletteAppTabView.swift in Sources */,
+				6FA171702A914D7E00243A70 /* TabBarForAppView.swift in Sources */,
 				6F1697802A8E465F0092027A /* SectorModel.swift in Sources */,
+				6FA1717F2A9170FA00243A70 /* SettingsTabView.swift in Sources */,
 				6F1697A02A8F66FE0092027A /* WhichOfTwoInOneViewStack.swift in Sources */,
+				6FA1716C2A913DB400243A70 /* RouletteAppTabViewModel.swift in Sources */,
 				6F1697902A8E732B0092027A /* RouleteTabView.swift in Sources */,
+				6FA171812A91710A00243A70 /* SettingsTabViewModel.swift in Sources */,
 				6F16979A2A8F64DE0092027A /* WhichOfTwelveViewStack.swift in Sources */,
 				6F1697952A8E9ADA0092027A /* WhichOf.swift in Sources */,
+				6FA171742A915B4600243A70 /* ScrollOffsetPreferenceKey.swift in Sources */,
 				6FFE35682A8E1F1500956848 /* RouletteView.swift in Sources */,
+				6FA171782A915B6400243A70 /* TrackableScrollView.swift in Sources */,
+				6FA1716E2A913EF000243A70 /* RouletteAppTabModel.swift in Sources */,
 				6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */,
 				6F1697842A8E5E2C0092027A /* BettingBoardView.swift in Sources */,
+				6FA171892A9206FA00243A70 /* RatingModel.swift in Sources */,
 				6F1697982A8F64960092027A /* BottomViewStack.swift in Sources */,
 				6F1697A22A8F770D0092027A /* InfoBoardMenager.swift in Sources */,
 				6F16979E2A8F65C40092027A /* SectorsViewStack.swift in Sources */,
+				6FA171832A91724200243A70 /* RatingTabView.swift in Sources */,
 				6F1697862A8E5E3E0092027A /* BettingBoardViewModel.swift in Sources */,
 				6F16979C2A8F65560092027A /* ZeroViewStack.swift in Sources */,
 			);
@@ -410,6 +534,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = new.RouletteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,6 +566,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = new.RouletteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,6 +597,65 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6FA1718E2A9213D300243A70 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6FA171902A9213D300243A70 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		6FA171922A9213D300243A70 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		6FA171942A9213D300243A70 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		6FA171962A9213D300243A70 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6FA171982A9213D300243A70 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		6FA1719A2A9213D300243A70 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		6FA1719C2A9213D300243A70 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6FA1719E2A9213D300243A70 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA1718D2A9213D300243A70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6FFE355A2A8E1F1500956848 /* Project object */;
 }

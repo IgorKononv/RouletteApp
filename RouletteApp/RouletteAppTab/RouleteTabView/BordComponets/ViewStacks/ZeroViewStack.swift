@@ -39,6 +39,7 @@ struct ZeroViewStack: View {
                 }
             }
         }
+        .disabled(viewModel.isAnimating)
         .padding(.horizontal, ScreeSize.width * 0.16)
         .offset(x: ScreeSize.width * 0.1)
     }

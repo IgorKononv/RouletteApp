@@ -9,9 +9,9 @@ import Foundation
 
 struct SectorModel: Equatable, Hashable {    
     let number: Int
-    let color: SectorColor
+    let color: SectorColorModel
     let whichOfTwelveModel: WhichOfTwelveModel?
     let whichOfHalfModel: WhichOfHalfModel?
     let whicOfEvenModel: WhicOfEvenModel?
-    let whichOfTwoInOne: WhichOfTwoInOne?
+    let whichOfTwoInOne: WhichOfTwoInOneModel?
 }

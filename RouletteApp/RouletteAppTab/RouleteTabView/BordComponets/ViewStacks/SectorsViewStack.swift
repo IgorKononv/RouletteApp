@@ -43,6 +43,7 @@ struct SectorsViewStack: View {
                                 }
                             }
                         }
+                        .disabled(viewModel.isAnimating)
                     }
                 }
                 .padding(.horizontal, -4)
