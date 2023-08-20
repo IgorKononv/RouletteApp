@@ -15,13 +15,13 @@ class RouletteAppTabViewModel: ObservableObject {
     
     @Published var rouletteAppTabModel: RouletteAppTabModel = .game {
         didSet {
-            isIncreasing = false
+            onChangeRouletteAppTabModel()
         }
     }
     @Published var arayRouletteAppTabModel: [RouletteAppTabModel] = RouletteAppTabModel.allCases
 
     let trackableScrollMenager = TrackableScrollMenager.shared
-    let authMeneger = AuthMeneger.shared
+    let firebaseMeneger = FirebaseMeneger.shared
 
     init() {
         trackableScrollMenager.$isIncreasing
@@ -35,5 +35,16 @@ class RouletteAppTabViewModel: ObservableObject {
         }
     }
     
-    
+    private func onChangeRouletteAppTabModel() {
+        isIncreasing = false
+        if rouletteAppTabModel == .rating {
+            Task {
+                do {
+                    try await firebaseMeneger.getLeaderUsers()
+                } catch {
+                    print(error)
+                }
+            }
+        }
+    }
 }

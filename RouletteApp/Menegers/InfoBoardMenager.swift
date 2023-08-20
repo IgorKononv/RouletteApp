@@ -10,7 +10,7 @@ import SwiftUI
 class InfoBoardMenager: ObservableObject{
     static let shared = InfoBoardMenager()
     
-    let authMeneger = AuthMeneger.shared
+    let authMeneger = FirebaseMeneger.shared
     
     @Published var currentUser: UserModel = UserModel(id: "", email: nil, userName: "", moneyBalance: 0, winGames: 0, payedGames: 0)
         

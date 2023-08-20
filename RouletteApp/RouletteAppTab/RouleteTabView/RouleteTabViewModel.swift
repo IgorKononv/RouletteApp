@@ -11,7 +11,6 @@ class RouleteTabViewModel: ObservableObject {
     
     @Published var scrollViewContentOffset: CGFloat = 0.0
     @Published var didShowMore = false
-//    @Published var moneyBalance = 2000
     @Published var currentUser: UserModel = UserModel(id: "", email: nil, userName: "", moneyBalance: 0, winGames: 0, payedGames: 0)
     @Published var rate = 50 {
         didSet  {

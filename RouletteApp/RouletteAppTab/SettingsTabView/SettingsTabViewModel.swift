@@ -15,7 +15,7 @@ class SettingsTabViewModel: ObservableObject {
     @Published var showAlert = false
     @Published var shareText = ""
     
-    let authMeneger = AuthMeneger.shared
+    let authMeneger = FirebaseMeneger.shared
     
     func clickButton(_ cell: SettingsModel) {
         switch cell {

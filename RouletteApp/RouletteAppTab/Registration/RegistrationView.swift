@@ -9,11 +9,15 @@ import SwiftUI
 
 struct RegistrationView: View {
     @StateObject var viewModel = RegistrationViewModel()
+    @FocusState var isTextFieldFocused: Bool
     var body: some View {
         ZStack {
             Color.white
                 .ignoresSafeArea()
-            
+                .onTapGesture {
+                    viewModel.authMeneger.showAlertName = false
+                    isTextFieldFocused = false
+                }
             VStack(spacing: 20) {
                 Text("Wellcome to - RouletteApp")
                     .bold()
@@ -44,28 +48,51 @@ struct RegistrationView: View {
                     }
                     .frame(width: ScreeSize.width * 0.7, height: 70)
                 }
-                ZStack {
-                    Rectangle()
-                        .frame(width: ScreeSize.width * 0.7 + 3, height: 73)
-                        .foregroundColor(.black)
-                    Button {
-                        
-                    } label: {
-                        ZStack {
-                            Rectangle()
-                                .frame(width: ScreeSize.width * 0.7, height: 70)
-                                .foregroundColor(.white)
-                            HStack {
-                                Image("email_icon")
-                                    .padding(.horizontal)
-                                Text("Sign in with Email")
-                                    .foregroundColor(.black)
-                                    .bold()
-                                Spacer()
+            }
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.black)
+                    .frame(height: ScreeSize.height * 0.4 + 5)
+                    .cornerRadius(20)
+
+                Rectangle()
+                    .foregroundColor(.gray)
+                    .frame(height: ScreeSize.height * 0.4)
+                    .cornerRadius(20)
+                VStack {
+                    Text("Please enter your name")
+                        .bold()
+                        .font(.title3)
+                        .offset(y: -ScreeSize.height * 0.05)
+
+                    TextField("tap here..", text: $viewModel.nameCreated , onCommit: {
+                        viewModel.signInAnanonimuslu()
+                        isTextFieldFocused = false
+                    })
+                        .focused($isTextFieldFocused)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .onChange(of: viewModel.nameCreated) { newValue in
+                            if viewModel.nameCreated.count > 15 {
+                                viewModel.nameCreated.removeLast()
                             }
                         }
+                    Button {
+                        isTextFieldFocused = false
+                        viewModel.signInAnanonimuslu()
+                    } label: {
+                        Text("GO!")
+                            .bold()
+                            .foregroundColor(.red)
+                            .opacity(viewModel.nameCreated == "" ? 0.5 : 1)
                     }
-                    .frame(width: ScreeSize.width * 0.7, height: 70)
+                }
+            }
+            .frame(height: ScreeSize.height * 0.4)
+            .offset(y: -ScreeSize.height * (viewModel.showAlertName ? 0 : 1))
+            .onChange(of: viewModel.showAlertName) { newValue in
+                if newValue {
+                    isTextFieldFocused = true
                 }
             }
         }

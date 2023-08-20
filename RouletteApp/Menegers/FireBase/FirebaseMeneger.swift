@@ -10,10 +10,13 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
-class AuthMeneger: ObservableObject {
-    static let shared = AuthMeneger()
+class FirebaseMeneger: ObservableObject {
+    static let shared = FirebaseMeneger()
     
     @AppStorage("userLogined") var userLogined = false
+    @Published var nameCreated = ""
+    @Published var showAlertName = false
+    @Published var laderUsers: [UserModel] = []
     @Published var currentUser: UserModel? {
         didSet {
             currentUserCheker()
@@ -21,7 +24,7 @@ class AuthMeneger: ObservableObject {
     }
     
     private var db = Firestore.firestore()
-
+    
     init() {
         if userLogined {
             Task {
@@ -44,9 +47,21 @@ class AuthMeneger: ObservableObject {
                 if documentSnapshot.exists {
                     // User document already exists, no need to create
                 } else {
+                    guard nameCreated != "" else {
+                        DispatchQueue.main.async {
+                            self.showAlertName = true
+                        }
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.showAlertName = false
+                    }
                     try await db.collection("users").document(authDataResult.uid).setData(
-                        ["id": authDataResult.uid, "name": "Anonimus", "userPoints": 2000, "winGames": 0 , "payedGames": 0]
+                        ["id": authDataResult.uid, "name": nameCreated, "userPoints": 2000, "winGames": 0 , "payedGames": 0]
                     )
+                    DispatchQueue.main.async {
+                        self.nameCreated = ""
+                    }
                 }
                 try await fetchUserData()
             } catch {
@@ -134,6 +149,43 @@ class AuthMeneger: ObservableObject {
             } else {
                 self.userLogined = true
             }
+        }
+    }
+    
+    func getLeaderUsers() async throws {
+        do {
+            let querySnapshot = try await db.collection("users").getDocuments()
+            
+            for document in querySnapshot.documents {
+                let data = document.data()
+
+                if let id = data["id"] as? String,
+                   let userName = data["name"] as? String,
+                   let userPoints = data["userPoints"] as? Int {
+                    let email = data["email"] as? String
+                    let winGames = data["winGames"] as? Int
+                    let payedGames = data["payedGames"] as? Int
+                    
+                    let newUser = UserModel(
+                        id: id,
+                        email: email,
+                        userName: userName,
+                        moneyBalance: userPoints,
+                        winGames: winGames ?? 0,
+                        payedGames: payedGames ?? 0
+                    )
+                    
+                    if let existingIndex = laderUsers.firstIndex(where: { $0.id == id }) {
+                        // Update existing user data
+                        laderUsers[existingIndex] = newUser
+                    } else {
+                        // Add new user
+                        laderUsers.append(newUser)
+                    }
+                }
+            }
+        } catch {
+            print("Error fetching leader users: \(error.localizedDescription)")
         }
     }
 }
