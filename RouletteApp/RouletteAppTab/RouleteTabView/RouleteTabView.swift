@@ -82,8 +82,14 @@ struct RouleteTabView: View {
                                 }
                                 
                                 Spacer()
-                                
-                                Text(viewModel.moneyBalance.description)
+                                VStack {
+                                    Text(viewModel.currentUser.moneyBalance.description)
+                                        .lineLimit(1)
+                                        .frame(width: 100)
+                                    Text(viewModel.currentUser.userName.description)
+                                        .lineLimit(1)
+                                        .frame(width: 100)
+                                }
                             }
                             Text(viewModel.isAnimating ? "Spinning ..." : "Sector \n \(viewModel.currentSector.number) \(viewModel.currentSector.color.rawValue)")
                                 .multilineTextAlignment(.center)
@@ -113,7 +119,7 @@ struct RouleteTabView: View {
                                             }
                                         }
                                         Button {
-                                            viewModel.rate = viewModel.moneyBalance / 10
+                                            viewModel.rate = viewModel.currentUser.moneyBalance / 10
                                         } label: {
                                             Text("1/10")
                                                 .bold()
@@ -125,7 +131,7 @@ struct RouleteTabView: View {
                                                 }
                                         }
                                         Button {
-                                            viewModel.rate = viewModel.moneyBalance
+                                            viewModel.rate = viewModel.currentUser.moneyBalance
                                         } label: {
                                             Text("MAX")
                                                 .bold()

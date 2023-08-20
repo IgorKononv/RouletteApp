@@ -9,7 +9,8 @@ import SwiftUI
 
 class RouletteAppTabViewModel: ObservableObject {
     
-    @Published var isIncreasing: Bool = false
+    @AppStorage("userLogined") var userLogined = false
+    @Published var isIncreasing = false
     @Published var hideTabBar = false
     
     @Published var rouletteAppTabModel: RouletteAppTabModel = .game {
@@ -20,6 +21,7 @@ class RouletteAppTabViewModel: ObservableObject {
     @Published var arayRouletteAppTabModel: [RouletteAppTabModel] = RouletteAppTabModel.allCases
 
     let trackableScrollMenager = TrackableScrollMenager.shared
+    let authMeneger = AuthMeneger.shared
 
     init() {
         trackableScrollMenager.$isIncreasing

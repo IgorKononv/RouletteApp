@@ -47,22 +47,22 @@ class BettingBoardViewModel: ObservableObject {
     
     func sectorsBetCell(_ sectorModel: SectorModel) {
         let rate = infoBoardMenager.rate
-        let money = infoBoardMenager.moneyBalance
-        guard money >= rate else { return }
-        
+        let money = infoBoardMenager.currentUser.moneyBalance
+        guard money >= rate && money != 0 else { return }
+
         if let retePlus = infoBoardMenager.dictionarySectorsWinBets[sectorModel] {
-            infoBoardMenager.moneyBalance += retePlus
+            infoBoardMenager.currentUser.moneyBalance += retePlus
             infoBoardMenager.dictionarySectorsWinBets.removeValue(forKey: sectorModel)
         } else {
-            infoBoardMenager.moneyBalance -= rate
+            infoBoardMenager.currentUser.moneyBalance -= rate
             infoBoardMenager.dictionarySectorsWinBets[sectorModel] = rate
         }
     }
     
     func whichOfWhichOfTwelveBetCell(_ whichOfTwelve: WhichOfTwelveModel) {
         let rate = infoBoardMenager.rate
-        let money = infoBoardMenager.moneyBalance
-        guard money >= rate else { return }
+        let money = infoBoardMenager.currentUser.moneyBalance
+        guard money >= rate && money != 0 else { return }
         
         var sectorModel: [SectorModel] = []
         
@@ -76,13 +76,13 @@ class BettingBoardViewModel: ObservableObject {
         sectorModel.forEach { sector in
             if let retePlus = infoBoardMenager.dictionaryWhichOfTwelveWinBets[sector] {
                 if counter {
-                    infoBoardMenager.moneyBalance += retePlus
+                    infoBoardMenager.currentUser.moneyBalance += retePlus
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfTwelveWinBets.removeValue(forKey: sector)
             } else {
                 if counter {
-                    infoBoardMenager.moneyBalance -= rate
+                    infoBoardMenager.currentUser.moneyBalance -= rate
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfTwelveWinBets[sector] = rate
@@ -92,9 +92,9 @@ class BettingBoardViewModel: ObservableObject {
     
     func whichOfTwoInOneBetCell(_ whichOfTwoInOne: WhichOfTwoInOneModel) {
         let rate = infoBoardMenager.rate
-        let money = infoBoardMenager.moneyBalance
-        guard money >= rate else { return }
-        
+        let money = infoBoardMenager.currentUser.moneyBalance
+        guard money >= rate && money != 0 else { return }
+
         var sectorModel: [SectorModel] = []
         
         sectors.forEach { sector in
@@ -107,13 +107,13 @@ class BettingBoardViewModel: ObservableObject {
         sectorModel.forEach { sector in
             if let retePlus = infoBoardMenager.dictionaryWhichOfTwoInOneWinBets[sector] {
                 if counter {
-                    infoBoardMenager.moneyBalance += retePlus
+                    infoBoardMenager.currentUser.moneyBalance += retePlus
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfTwoInOneWinBets.removeValue(forKey: sector)
             } else {
                 if counter {
-                    infoBoardMenager.moneyBalance -= rate
+                    infoBoardMenager.currentUser.moneyBalance -= rate
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfTwoInOneWinBets[sector] = rate
@@ -123,9 +123,9 @@ class BettingBoardViewModel: ObservableObject {
     
     func bottomViewStackBetCell(bottomCell: Int) {
         let rate = infoBoardMenager.rate
-        let money = infoBoardMenager.moneyBalance
-        guard money >= rate else { return }
-        
+        let money = infoBoardMenager.currentUser.moneyBalance
+        guard money >= rate && money != 0 else { return }
+
         if bottomCell == 1 {
             
             var sectorModel: [SectorModel] = []
@@ -194,13 +194,13 @@ class BettingBoardViewModel: ObservableObject {
         sectorModel.forEach { sector in
             if let retePlus = infoBoardMenager.dictionaryWhichHalfOfDigitsWinBets[sector] {
                 if counter {
-                    infoBoardMenager.moneyBalance += retePlus
+                    infoBoardMenager.currentUser.moneyBalance += retePlus
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichHalfOfDigitsWinBets.removeValue(forKey: sector)
             } else {
                 if counter {
-                    infoBoardMenager.moneyBalance -= rate
+                    infoBoardMenager.currentUser.moneyBalance -= rate
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichHalfOfDigitsWinBets[sector] = rate
@@ -213,13 +213,13 @@ class BettingBoardViewModel: ObservableObject {
         sectorModel.forEach { sector in
             if let retePlus = infoBoardMenager.dictionaryWhichOfEvenWinBets[sector] {
                 if counter {
-                    infoBoardMenager.moneyBalance += retePlus
+                    infoBoardMenager.currentUser.moneyBalance += retePlus
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfEvenWinBets.removeValue(forKey: sector)
             } else {
                 if counter {
-                    infoBoardMenager.moneyBalance -= rate
+                    infoBoardMenager.currentUser.moneyBalance -= rate
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfEvenWinBets[sector] = rate
@@ -232,13 +232,13 @@ class BettingBoardViewModel: ObservableObject {
         sectorModel.forEach { sector in
             if let retePlus = infoBoardMenager.dictionaryWhichOfColorWinBets[sector] {
                 if counter {
-                    infoBoardMenager.moneyBalance += retePlus
+                    infoBoardMenager.currentUser.moneyBalance += retePlus
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfColorWinBets.removeValue(forKey: sector)
             } else {
                 if counter {
-                    infoBoardMenager.moneyBalance -= rate
+                    infoBoardMenager.currentUser.moneyBalance -= rate
                     counter = false
                 }
                 infoBoardMenager.dictionaryWhichOfColorWinBets[sector] = rate

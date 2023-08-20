@@ -35,7 +35,7 @@
 		6FA171832A91724200243A70 /* RatingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171822A91724200243A70 /* RatingTabView.swift */; };
 		6FA171852A91726700243A70 /* RatingTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171842A91726700243A70 /* RatingTabViewModel.swift */; };
 		6FA171872A91744600243A70 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171862A91744600243A70 /* SettingsModel.swift */; };
-		6FA171892A9206FA00243A70 /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171882A9206FA00243A70 /* RatingModel.swift */; };
+		6FA171892A9206FA00243A70 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171882A9206FA00243A70 /* UserModel.swift */; };
 		6FA1718C2A920FA700243A70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1718B2A920FA700243A70 /* GoogleService-Info.plist */; };
 		6FA1718F2A9213D300243A70 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA1718E2A9213D300243A70 /* FirebaseAuth */; };
 		6FA171912A9213D300243A70 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA171902A9213D300243A70 /* FirebaseAuthCombine-Community */; };
@@ -47,6 +47,10 @@
 		6FA1719D2A9213D300243A70 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA1719C2A9213D300243A70 /* FirebaseStorage */; };
 		6FA1719F2A9213D300243A70 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA1719E2A9213D300243A70 /* FirebaseStorageCombine-Community */; };
 		6FA171A12A92141900243A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171A02A92141900243A70 /* AppDelegate.swift */; };
+		6FA171A72A921E2B00243A70 /* AuthMeneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171A62A921E2B00243A70 /* AuthMeneger.swift */; };
+		6FA171A92A921F0700243A70 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171A82A921F0700243A70 /* RegistrationView.swift */; };
+		6FA171AB2A921F6700243A70 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171AA2A921F6700243A70 /* RegistrationViewModel.swift */; };
+		6FA171AD2A9280DC00243A70 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA171AC2A9280DC00243A70 /* ShareView.swift */; };
 		6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */; };
 		6FFE35682A8E1F1500956848 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE35672A8E1F1500956848 /* RouletteView.swift */; };
 		6FFE356A2A8E1F1600956848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE35692A8E1F1600956848 /* Assets.xcassets */; };
@@ -82,9 +86,13 @@
 		6FA171822A91724200243A70 /* RatingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTabView.swift; sourceTree = "<group>"; };
 		6FA171842A91726700243A70 /* RatingTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTabViewModel.swift; sourceTree = "<group>"; };
 		6FA171862A91744600243A70 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
-		6FA171882A9206FA00243A70 /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
+		6FA171882A9206FA00243A70 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		6FA1718B2A920FA700243A70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6FA171A02A92141900243A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6FA171A62A921E2B00243A70 /* AuthMeneger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMeneger.swift; sourceTree = "<group>"; };
+		6FA171A82A921F0700243A70 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		6FA171AA2A921F6700243A70 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		6FA171AC2A9280DC00243A70 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		6FFE35622A8E1F1500956848 /* RouletteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouletteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFE35652A8E1F1500956848 /* RouletteAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteAppApp.swift; sourceTree = "<group>"; };
 		6FFE35672A8E1F1500956848 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
@@ -120,7 +128,7 @@
 				6FA1716D2A913EF000243A70 /* RouletteAppTabModel.swift */,
 				6F1697812A8E5D6E0092027A /* SectorColorModel.swift */,
 				6F1697942A8E9ADA0092027A /* WhichOf.swift */,
-				6FA171882A9206FA00243A70 /* RatingModel.swift */,
+				6FA171882A9206FA00243A70 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 		6F1697872A8E6B1D0092027A /* Menegers */ = {
 			isa = PBXGroup;
 			children = (
+				6FA171A52A921DFB00243A70 /* FireBase */,
 				6F1697892A8E6B420092027A /* SectorMeneger.swift */,
 				6F1697A12A8F770D0092027A /* InfoBoardMenager.swift */,
 				6FA1717A2A9161E600243A70 /* TrackableScrollMenager.swift */,
@@ -182,6 +191,7 @@
 		6F1697912A8E7FDA0092027A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6FA171AC2A9280DC00243A70 /* ShareView.swift */,
 				6F1697922A8E80090092027A /* ScreeSize.swift */,
 				6FA171792A915B7000243A70 /* TrackableScrollView */,
 			);
@@ -230,8 +240,18 @@
 		6FA1718A2A920CEC00243A70 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				6FA171A82A921F0700243A70 /* RegistrationView.swift */,
+				6FA171AA2A921F6700243A70 /* RegistrationViewModel.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		6FA171A52A921DFB00243A70 /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				6FA171A62A921E2B00243A70 /* AuthMeneger.swift */,
+			);
+			path = FireBase;
 			sourceTree = "<group>";
 		};
 		6FFE35592A8E1F1500956848 = {
@@ -360,13 +380,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F1697822A8E5D6E0092027A /* SectorColorModel.swift in Sources */,
+				6FA171A72A921E2B00243A70 /* AuthMeneger.swift in Sources */,
 				6FA171852A91726700243A70 /* RatingTabViewModel.swift in Sources */,
 				6F16978A2A8E6B420092027A /* SectorMeneger.swift in Sources */,
 				6FA1717B2A9161E600243A70 /* TrackableScrollMenager.swift in Sources */,
+				6FA171A92A921F0700243A70 /* RegistrationView.swift in Sources */,
 				6F16977E2A8E3F4E0092027A /* RouletteViewModel.swift in Sources */,
 				6F1697A42A8F89310092027A /* RouleteTabViewModel.swift in Sources */,
 				6FA171872A91744600243A70 /* SettingsModel.swift in Sources */,
 				6F1697932A8E80090092027A /* ScreeSize.swift in Sources */,
+				6FA171AB2A921F6700243A70 /* RegistrationViewModel.swift in Sources */,
 				6FA171A12A92141900243A70 /* AppDelegate.swift in Sources */,
 				6FA1716A2A913D9900243A70 /* RouletteAppTabView.swift in Sources */,
 				6FA171702A914D7E00243A70 /* TabBarForAppView.swift in Sources */,
@@ -380,11 +403,12 @@
 				6F1697952A8E9ADA0092027A /* WhichOf.swift in Sources */,
 				6FA171742A915B4600243A70 /* ScrollOffsetPreferenceKey.swift in Sources */,
 				6FFE35682A8E1F1500956848 /* RouletteView.swift in Sources */,
+				6FA171AD2A9280DC00243A70 /* ShareView.swift in Sources */,
 				6FA171782A915B6400243A70 /* TrackableScrollView.swift in Sources */,
 				6FA1716E2A913EF000243A70 /* RouletteAppTabModel.swift in Sources */,
 				6FFE35662A8E1F1500956848 /* RouletteAppApp.swift in Sources */,
 				6F1697842A8E5E2C0092027A /* BettingBoardView.swift in Sources */,
-				6FA171892A9206FA00243A70 /* RatingModel.swift in Sources */,
+				6FA171892A9206FA00243A70 /* UserModel.swift in Sources */,
 				6F1697982A8F64960092027A /* BottomViewStack.swift in Sources */,
 				6F1697A22A8F770D0092027A /* InfoBoardMenager.swift in Sources */,
 				6F16979E2A8F65C40092027A /* SectorsViewStack.swift in Sources */,
@@ -526,6 +550,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,6 +583,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

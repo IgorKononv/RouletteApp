@@ -36,7 +36,7 @@ enum SettingsModel: Identifiable, CaseIterable {
         case .logOut:
             return "LOG OUT"
         case .delete:
-        return "DELETE ACCOUNt"
+        return "DELETE ACCOUNT"
         }
     }
 }

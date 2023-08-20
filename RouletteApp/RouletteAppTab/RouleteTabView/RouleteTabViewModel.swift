@@ -11,7 +11,8 @@ class RouleteTabViewModel: ObservableObject {
     
     @Published var scrollViewContentOffset: CGFloat = 0.0
     @Published var didShowMore = false
-    @Published var moneyBalance = 2000
+//    @Published var moneyBalance = 2000
+    @Published var currentUser: UserModel = UserModel(id: "", email: nil, userName: "", moneyBalance: 0, winGames: 0, payedGames: 0)
     @Published var rate = 50 {
         didSet  {
             infoBoardMenager.changeRate(rate: rate)
@@ -33,16 +34,18 @@ class RouleteTabViewModel: ObservableObject {
         infoBoardMenager.$isAnimating
             .map({ $0 })
             .assign(to: &$isAnimating)
-        infoBoardMenager.$moneyBalance
-            .map({ $0 })
-            .assign(to: &$moneyBalance)
+        infoBoardMenager.$currentUser
+            .map { $0 }
+            .assign(to: &$currentUser)
     }
     
     func changeRate(isPlus: Bool) {
         if isPlus {
             rate += 1
         } else {
-            rate -= 1
+            if currentUser.moneyBalance > 0 {
+                rate -= 1
+            }
         }
     }
     

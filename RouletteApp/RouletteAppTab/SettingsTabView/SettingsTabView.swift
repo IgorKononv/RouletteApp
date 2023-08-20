@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SettingsTabView: View {
+    @Environment(\.requestReview) var requestReview
     @StateObject var viewModel = SettingsTabViewModel()
     var body: some View {
         VStack {
@@ -17,7 +19,10 @@ struct SettingsTabView: View {
                         .frame(width: ScreeSize.width * 0.7 + 3, height: 63)
                         .foregroundColor(.black)
                     Button {
-                        
+                        if cell == .rateApp {
+                            requestReview()
+                        }
+                        viewModel.clickButton(cell)
                     } label: {
                         ZStack {
                             Rectangle()
@@ -29,6 +34,19 @@ struct SettingsTabView: View {
                     }
                 }
             }
+        }
+        .sheet(isPresented: $viewModel.isShareSheetPresented) {
+            ShareView(shareText: viewModel.shareText)
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("Warning"),
+                message: Text("Do you really want to delete ? All data will be lost"),
+                primaryButton: .default(Text("Delete"), action: {
+                    viewModel.deleteAccount()
+                }),
+                secondaryButton: .cancel(Text("Close"), action: {})
+            )
         }
     }
 }

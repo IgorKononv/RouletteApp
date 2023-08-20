@@ -10,8 +10,12 @@ import SwiftUI
 class InfoBoardMenager: ObservableObject{
     static let shared = InfoBoardMenager()
     
+    let authMeneger = AuthMeneger.shared
+    
+    @Published var currentUser: UserModel = UserModel(id: "", email: nil, userName: "", moneyBalance: 0, winGames: 0, payedGames: 0)
+        
     @Published var rate = 50
-    @Published var moneyBalance = 2000
+//    @Published var moneyBalance = 2000
     @Published var isAnimating = false {
         didSet {
             didWinByNumbers()
@@ -28,32 +32,60 @@ class InfoBoardMenager: ObservableObject{
     @Published var dictionaryWhichOfColorWinBets = [SectorModel: Int]()
     @Published var dictionaryWhichOfEvenWinBets = [SectorModel: Int]()
     
+    init() {
+        authMeneger.$currentUser
+            .map { user in
+                if let user = user {
+                    return user
+                } else {
+                    return UserModel(id: "", email: nil, userName: "", moneyBalance: 0, winGames: 0, payedGames: 0)
+                }
+            }
+            .assign(to: &$currentUser)
+    }
+    
     func changeRate(rate: Int) {
         self.rate = rate
     }
     
     private func didWinByNumbers() {
+        var didWinGame = false
+        
         if !isAnimating {
             if let value = dictionarySectorsWinBets[currentSector] {
-                moneyBalance += value * 36
+                currentUser.moneyBalance += value * 36
+                didWinGame = true
             }
             if let value = dictionaryWhichOfTwelveWinBets[currentSector] {
-                moneyBalance += value * 3
+                currentUser.moneyBalance += value * 3
+                didWinGame = true
             }
             if let value = dictionaryWhichOfTwoInOneWinBets[currentSector] {
-                moneyBalance += value * 3
+                currentUser.moneyBalance += value * 3
+                didWinGame = true
             }
             
             if let value = dictionaryWhichHalfOfDigitsWinBets[currentSector] {
-                moneyBalance += value * 2
+                currentUser.moneyBalance += value * 2
+                didWinGame = true
             }
             if let value = dictionaryWhichOfColorWinBets[currentSector] {
-                moneyBalance += value * 2
+                currentUser.moneyBalance += value * 2
+                didWinGame = true
             }
             if let value = dictionaryWhichOfEvenWinBets[currentSector] {
-                moneyBalance += value * 2
+                currentUser.moneyBalance += value * 2
+                didWinGame = true
             }
-
+            if dictionarySectorsWinBets.isEmpty && dictionaryWhichOfTwelveWinBets.isEmpty && dictionaryWhichOfTwoInOneWinBets.isEmpty && dictionaryWhichHalfOfDigitsWinBets.isEmpty && dictionaryWhichOfColorWinBets.isEmpty && dictionaryWhichOfEvenWinBets.isEmpty {
+                
+            } else {
+                if didWinGame {
+                    currentUser.winGames += 1
+                }
+                currentUser.payedGames += 1
+                authMeneger.changeBalanceAndWinRate(currentUser)
+            }
             dictionarySectorsWinBets = [:]
             dictionaryWhichOfTwelveWinBets = [:]
             dictionaryWhichOfTwoInOneWinBets = [:]

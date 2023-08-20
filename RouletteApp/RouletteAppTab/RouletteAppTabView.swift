@@ -21,6 +21,10 @@ struct RouletteAppTabView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             TabBarForAppView(viewModel: viewModel)
+            
+            RegistrationView()
+                .offset(y: viewModel.userLogined ? -ScreeSize.height : 0)
+                .animation(.easeOut)
         }
         .ignoresSafeArea()
     }
