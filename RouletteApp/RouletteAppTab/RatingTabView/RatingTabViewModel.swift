@@ -19,7 +19,9 @@ class RatingTabViewModel: ObservableObject {
         cancellable = firebaseMeneger.$laderUsers
             .map { $0 }
             .sink { [weak self] newLaderUsers in
-                self?.laderUsers = newLaderUsers.sorted(by: { $0.moneyBalance > $1.moneyBalance })
+                DispatchQueue.main.async {
+                    self?.laderUsers = newLaderUsers.sorted(by: { $0.moneyBalance > $1.moneyBalance })
+                }
             }
     }
     
