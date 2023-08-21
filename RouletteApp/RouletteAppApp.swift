@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct RouletteAppApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouletteAppTabView()
         }
     }
 }
